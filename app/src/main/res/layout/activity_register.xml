@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="@drawable/login_bg">
+
+
+    <TextView
+        android:id="@+id/textReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/registerActivity"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/registerCard"
+        android:layout_below="@+id/textReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="40dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <EditText
+                android:id="@+id/regName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="40dp"
+                android:drawableStart="@drawable/ic_cil_user"
+                android:drawablePadding="15dp"
+                android:drawableTint="#2A465F"
+                android:hint="@string/full_name"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/regUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="25dp"
+                android:drawableStart="@drawable/ic_cil_user"
+                android:drawablePadding="15dp"
+                android:drawableTint="#2A465F"
+                android:hint="@string/usernameRegActivity"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:layout_below="@+id/regName"
+                android:textColorHint="#757575"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/regEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/regUsername"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="25dp"
+                android:drawableStart="@drawable/ic_mdi_light_email"
+                android:drawablePadding="15dp"
+                android:drawableTint="#2A465F"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/regPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/regEmail"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="25dp"
+                android:drawableStart="@drawable/ic_clarity_phone_handset_line"
+                android:drawablePadding="15dp"
+                android:drawableTint="#2A465F"
+                android:hint="@string/phone_number"
+                android:inputType="phone"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/regPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/regPhone"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="25dp"
+                android:drawableStart="@drawable/ic_octicon_key_24"
+                android:drawablePadding="15dp"
+                android:drawableTint="#2A465F"
+                android:hint="@string/passwordRegActivity"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                android:autofillHints="" />
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="140dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/regPassword"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#2A465F"
+                android:text="@string/sign_up"
+                android:textColor="#FFF"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_below="@+id/btnSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/already_a_member"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/textLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_in"
+                    android:textSize="18sp"
+                    android:textColor="#2A465F"
+                    android:textStyle="bold"
+                    android:layout_marginStart="5dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/backText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerCard"
+        android:textStyle="bold"
+        android:text="@string/back"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:drawablePadding="10dp"
+        app:drawableTint="#FFFFFF"
+        app:drawableStartCompat="@drawable/ic_eva_arrow_back_outline" />
+
+</RelativeLayout>

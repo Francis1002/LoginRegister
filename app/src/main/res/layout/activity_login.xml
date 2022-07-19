@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@drawable/login_bg">
+
+    <TextView
+        android:id="@+id/textWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textColor="#fff"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="30dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@+id/textWelcome"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="40dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <EditText
+                    android:id="@+id/loginUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_cil_user"
+                    android:inputType="textPersonName"
+                    android:layout_marginHorizontal="25dp"
+                    android:drawablePadding="15dp"
+                    android:drawableTint="#2A465F"
+                    android:hint="@string/username"
+                    android:autofillHints="" />
+
+                <EditText
+                    android:id="@+id/loginPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_octicon_key_24"
+                    android:inputType="textPassword"
+                    android:layout_marginHorizontal="25dp"
+                    android:hint="@string/password"
+                    android:layout_below="@+id/loginUsername"
+                    android:drawablePadding="15dp"
+                    android:drawableTint="#2A465F"
+                    android:layout_marginTop="25dp"
+                    android:autofillHints="" />
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="125dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/loginPassword"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:text="@string/login"
+                    android:backgroundTint="#2A465F"
+                    android:textColor="#FFF"
+                    android:textSize="18sp"/>
+
+                <LinearLayout
+                    android:layout_below="@+id/btnLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/don_t_have_a_account"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/textRegister"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/register"
+                        android:textSize="18sp"
+                        android:textColor="#2A465F"
+                        android:textStyle="bold"
+                        android:layout_marginStart="5dp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
